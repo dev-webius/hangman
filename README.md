@@ -39,6 +39,7 @@ MVP (Minimum Viable Product) 로 개발
 - `Delete`: 내용 삭제
 - `Doc`: 문서 관련
 - `Build`: 빌드 관련
+- `Chore`: 기타 작업사항
 
 ```
 $ git commit
