@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 행맨 만들기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MVP (Minimum Viable Product) 로 개발
 
-## Available Scripts
+## 조건
 
-In the project directory, you can run:
+1. 한글 행맨 ([한글 자모 라이브러리](https://github.com/e-/Hangul.js/))
+2. 2 ~ 4글자 랜덤 단어 (자모 20개 이하)
+3. 기회는 10번, 틀리면 진행
+4. 동사 X
 
-### `npm start`
+## 역할
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. 키보드 레이아웃 배치, 실패한 개수에 따라 행맨 애니메이션 넣기 - `주희`
+  - 클릭 가능한 키 버튼
+  - Redux useSelector 활용
+2. 메인 화면, 시작, 초기화 기능 구현 - `상범`
+  - React Route DOM
+    - `/`: Main Page
+    - `/play`: Game Playing
+    - `/result`: Game Result
+  - 시작 상태 관리, 초기화 시 적절한 상태 초기화
+  - 랜덤 단어 추첨
+3. 키 버튼을 클릭하면 라이브러리를 활용해서 성공/실패 여부 처리 - `한별`
+  - 라이브러리 분석, 연동
+  - 버튼 클릭하면 설정된 단어와 비교, 성공/실패 처리
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 브랜치 전략
 
-### `npm test`
+- `main`: 안정화된 릴리즈
+- `develop`: 안정화된 테스트 버전
+- `feature/*`: 기능 단위 전략
+- `task/*`: 작업 단위 전략
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 커밋 메시지 규칙
 
-### `npm run build`
+- `Feat`: 신규 기능
+- `Fix`: 오류 수정
+- `Delete`: 내용 삭제
+- `Doc`: 문서 관련
+- `Build`: 빌드 관련
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ git commit
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 가장 첫 번째 줄
+{Type}: {Subject}
+Feat: 키보드 레이아웃 추가
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 두 칸 띄고 세 번째 줄
+{Body}
+생략 가능, 어떻게 보다 무엇을 왜 관점에서 작성
+가로로 길게 쓰지 않고 적당하게 끊어 쓰기
+```
