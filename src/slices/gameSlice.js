@@ -8,7 +8,7 @@ export const GAME_STATUS = {
 };
 
 const name = 'game';
-const initialState = {
+export const initialState = {
   status: GAME_STATUS.READY,
   failCount: 0,
   systemWord: [], // 랜덤 추첨된 정답 글자 배열
