@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import HangulLib from './components/HangulLib';
 
-import Mainpage from './pages/Mainpage';
-import Playpage from './pages/Playpage';
-import Resultpage from './pages/Resultpage';
+// import Mainpage from './pages/Mainpage';
+// import Playpage from './pages/Playpage';
+// import Resultpage from './pages/Resultpage';
 
 import './styles/index.scss';
 
@@ -18,6 +19,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+      <HangulLib/>
     </Provider>
   </React.StrictMode>
 );
@@ -26,9 +28,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Mainpage />} />
+        {/* <Route path="/" element={<Mainpage />} />
         <Route path="/play" element={<Playpage />} />
-        <Route path="/result" element={<Resultpage />} />
+        <Route path="/result" element={<Resultpage />} /> */}
       </Routes>
     </BrowserRouter>
   );

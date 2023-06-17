@@ -20,8 +20,11 @@ const gameSlice = createSlice({
   name,
   initialState,
   reducers: {
+    validation: (state, action) =>{
 
+    }
   },
 });
 
 export default gameSlice.reducer;
+export const {validation} = createSlice.actions;
