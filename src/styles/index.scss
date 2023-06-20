@@ -1,4 +1,6 @@
 .keyboard {
+  margin-bottom: 100px;
+
   &-line {
     width: 100%;
     display: flex;
@@ -17,5 +19,15 @@
       background-color: #ddd;
       transition: all .5s;
     }
+  }
+}
+
+.hangman {
+  width:600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
