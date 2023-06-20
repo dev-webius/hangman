@@ -14,7 +14,12 @@ function Hangman() {
   return (
     <>
       <div className='hangman'>
-        <img src={image11} alt="" />
+        <div className='hangman-image'>
+          <img src={image11} alt="" />
+        </div>
+        <div className='hangman-word'>
+          <p>_____</p>
+        </div>
       </div>
     </>
   );

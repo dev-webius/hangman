@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .keyboard {
   margin-bottom: 100px;
 
@@ -23,11 +28,25 @@
 }
 
 .hangman {
-  width:600px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  img {
-    width: 100%;
-    height: auto;
+  &-image {
+    width:400px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-word {
+    margin-bottom: 50px;
+    text-align: center;
+
+    p {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2rem;
+      color: #7cc9fa;
+    }
   }
 }
